@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i0L-zw-CB6">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trip View Controller-->
+        <scene sceneID="38c-U6-8A1">
+            <objects>
+                <viewController id="i0L-zw-CB6" customClass="TripViewController" customModule="TripPlanningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JvT-6r-YSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KUD-Tn-3hX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="jeo-fN-TL3">
+                                    <rect key="frame" x="0.0" y="216" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="G4u-5d-L8c" customClass="TripTVCell" customModule="TripPlanningApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G4u-5d-L8c" id="Tia-wd-v4a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-z3-DiV">
+                                                    <rect key="frame" x="15" y="11" width="345" height="138"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Xh-Oh-4nJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="138"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ4-e9-ErP">
+                                                            <rect key="frame" x="28" y="35" width="292" height="68"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="7Xh-Oh-4nJ" firstAttribute="top" secondItem="CPF-z3-DiV" secondAttribute="top" id="1UF-G7-V0h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7Xh-Oh-4nJ" secondAttribute="trailing" id="6KV-QU-4AT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7Xh-Oh-4nJ" secondAttribute="bottom" id="Jxz-AH-RV0"/>
+                                                        <constraint firstItem="7Xh-Oh-4nJ" firstAttribute="leading" secondItem="CPF-z3-DiV" secondAttribute="leading" id="NyB-7d-rtC"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CPF-z3-DiV" secondAttribute="trailing" constant="15" id="G6h-Y1-AZL"/>
+                                                <constraint firstAttribute="bottom" secondItem="CPF-z3-DiV" secondAttribute="bottom" constant="11" id="W6a-3S-Xdz"/>
+                                                <constraint firstItem="CPF-z3-DiV" firstAttribute="leading" secondItem="Tia-wd-v4a" secondAttribute="leading" constant="15" id="sQd-tL-Rfc"/>
+                                                <constraint firstItem="CPF-z3-DiV" firstAttribute="top" secondItem="Tia-wd-v4a" secondAttribute="top" constant="11" id="t5T-YR-c3V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardView" destination="CPF-z3-DiV" id="qtf-3y-ES7"/>
+                                            <outlet property="tripImage" destination="7Xh-Oh-4nJ" id="MYQ-2X-hOZ"/>
+                                            <outlet property="tripTitleLabel" destination="mZ4-e9-ErP" id="zZn-O2-v4W"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTS-kV-4kn">
+                                <rect key="frame" x="294" y="586" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="mVf-xl-V0W"/>
+                                    <constraint firstAttribute="width" constant="56" id="qpP-fT-URn"/>
+                                </constraints>
+                                <state key="normal" image="icons8-plus"/>
+                                <connections>
+                                    <segue destination="iGG-Js-BYP" kind="presentation" identifier="toAddTripSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="M1D-1Q-0TS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KUD-Tn-3hX" firstAttribute="trailing" secondItem="JvT-6r-YSQ" secondAttribute="trailing" id="HmM-5S-G67"/>
+                            <constraint firstItem="2gd-ug-Tfu" firstAttribute="bottom" secondItem="oTS-kV-4kn" secondAttribute="bottom" constant="25" id="O6l-j1-3Sj"/>
+                            <constraint firstItem="KUD-Tn-3hX" firstAttribute="bottom" secondItem="JvT-6r-YSQ" secondAttribute="bottom" id="ZdS-Af-4eG"/>
+                            <constraint firstItem="2gd-ug-Tfu" firstAttribute="trailing" secondItem="oTS-kV-4kn" secondAttribute="trailing" constant="25" id="jsP-AV-KJm"/>
+                            <constraint firstItem="KUD-Tn-3hX" firstAttribute="leading" secondItem="JvT-6r-YSQ" secondAttribute="leading" id="rjm-3y-ooA"/>
+                            <constraint firstItem="KUD-Tn-3hX" firstAttribute="top" secondItem="JvT-6r-YSQ" secondAttribute="top" id="syW-pj-OvL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2gd-ug-Tfu"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="oTS-kV-4kn" id="m1f-cS-0H6"/>
+                        <outlet property="tripTableView" destination="KUD-Tn-3hX" id="ljR-9q-rhb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzT-OK-cMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="103.89805097451276"/>
+        </scene>
+        <!--AddTripVC-->
+        <scene sceneID="hnj-hV-cS5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripVC" id="iGG-Js-BYP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdK-cd-5gW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-plus" width="24" height="24"/>
+    </resources>
+</document>

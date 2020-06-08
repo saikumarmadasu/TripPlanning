@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HuG-Jl-BTy">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Trip View Controller-->
+        <scene sceneID="tLA-wF-1FS">
+            <objects>
+                <viewController id="HuG-Jl-BTy" customClass="AddTripViewController" customModule="TripPlanningApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bax-Yp-Tif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xy1-Yn-kwK" customClass="PopUpView" customModule="TripPlanningApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="335" height="160"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UM8-7S-Vgq">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="160"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Trip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-cq-qFM">
+                                        <rect key="frame" x="16" y="16" width="303" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1Se-Re-5P2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I67-b2-PCh">
+                                        <rect key="frame" x="16" y="54" width="303" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SFV-vb-VRZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO5-9c-3HE" customClass="PopUpButton" customModule="TripPlanningApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="110" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C47-HR-829"/>
+                                            <constraint firstAttribute="width" constant="100" id="scf-PO-xw4"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="didPressCancelButton:" destination="HuG-Jl-BTy" eventType="touchUpInside" id="sbT-ir-dtX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HR-lA-PsK" customClass="PopUpButton" customModule="TripPlanningApp" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="110" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="EqC-9d-Tcn"/>
+                                            <constraint firstAttribute="height" constant="40" id="tX0-oc-lN6"/>
+                                        </constraints>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="didPressSaveButton:" destination="HuG-Jl-BTy" eventType="touchUpInside" id="CU1-rD-214"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeF-QU-Dl6">
+                                        <rect key="frame" x="290" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="akU-co-ODJ"/>
+                                            <constraint firstAttribute="height" constant="30" id="xdI-eJ-gT6"/>
+                                        </constraints>
+                                        <color key="tintColor" name="Tint"/>
+                                        <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="didPressCameraButton:" destination="HuG-Jl-BTy" eventType="touchUpInside" id="Pom-AT-2pu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="I67-b2-PCh" secondAttribute="trailing" constant="16" id="0Az-PS-n2b"/>
+                                    <constraint firstAttribute="trailing" secondItem="UM8-7S-Vgq" secondAttribute="trailing" id="3wm-eT-47l"/>
+                                    <constraint firstItem="uwx-cq-qFM" firstAttribute="leading" secondItem="xy1-Yn-kwK" secondAttribute="leading" constant="16" id="Fin-KX-mwQ"/>
+                                    <constraint firstItem="UM8-7S-Vgq" firstAttribute="leading" secondItem="xy1-Yn-kwK" secondAttribute="leading" id="P3g-M8-8o6"/>
+                                    <constraint firstAttribute="height" constant="160" id="RUx-eF-hyE"/>
+                                    <constraint firstItem="UM8-7S-Vgq" firstAttribute="top" secondItem="xy1-Yn-kwK" secondAttribute="top" id="U6g-AP-X62"/>
+                                    <constraint firstAttribute="bottom" secondItem="DO5-9c-3HE" secondAttribute="bottom" constant="10" id="XIo-u2-FBf"/>
+                                    <constraint firstItem="eeF-QU-Dl6" firstAttribute="top" secondItem="xy1-Yn-kwK" secondAttribute="top" constant="10" id="XnU-ke-mjs"/>
+                                    <constraint firstAttribute="trailing" secondItem="uwx-cq-qFM" secondAttribute="trailing" constant="16" id="Y74-lV-12j"/>
+                                    <constraint firstItem="I67-b2-PCh" firstAttribute="top" secondItem="uwx-cq-qFM" secondAttribute="bottom" constant="8" id="c92-jz-guo"/>
+                                    <constraint firstItem="I67-b2-PCh" firstAttribute="leading" secondItem="xy1-Yn-kwK" secondAttribute="leading" constant="16" id="dDe-cU-wYU"/>
+                                    <constraint firstItem="DO5-9c-3HE" firstAttribute="leading" secondItem="xy1-Yn-kwK" secondAttribute="leading" constant="16" id="dKO-Gx-u8c"/>
+                                    <constraint firstItem="uwx-cq-qFM" firstAttribute="top" secondItem="xy1-Yn-kwK" secondAttribute="top" constant="16" id="ov2-PL-PBt"/>
+                                    <constraint firstAttribute="trailing" secondItem="9HR-lA-PsK" secondAttribute="trailing" constant="16" id="qZJ-57-ah9"/>
+                                    <constraint firstAttribute="bottom" secondItem="9HR-lA-PsK" secondAttribute="bottom" constant="10" id="qnd-2i-gXX"/>
+                                    <constraint firstAttribute="trailing" secondItem="eeF-QU-Dl6" secondAttribute="trailing" constant="15" id="rog-vc-Edt"/>
+                                    <constraint firstAttribute="bottom" secondItem="UM8-7S-Vgq" secondAttribute="bottom" id="uch-ix-6NB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xy1-Yn-kwK" firstAttribute="top" secondItem="c8g-xq-Xlp" secondAttribute="top" constant="20" id="18r-qd-I3o"/>
+                            <constraint firstItem="xy1-Yn-kwK" firstAttribute="leading" secondItem="bax-Yp-Tif" secondAttribute="leading" constant="20" id="Cd5-BB-kll"/>
+                            <constraint firstAttribute="trailing" secondItem="xy1-Yn-kwK" secondAttribute="trailing" constant="20" id="Lne-8e-M11"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c8g-xq-Xlp"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="DO5-9c-3HE" id="rG1-bn-eiu"/>
+                        <outlet property="popUpView" destination="xy1-Yn-kwK" id="m5e-Ku-gbf"/>
+                        <outlet property="saveButton" destination="9HR-lA-PsK" id="7fn-Ex-Rmr"/>
+                        <outlet property="titleLabel" destination="uwx-cq-qFM" id="Sdc-ig-0P7"/>
+                        <outlet property="tripImage" destination="UM8-7S-Vgq" id="9Ze-K1-diU"/>
+                        <outlet property="tripTextField" destination="I67-b2-PCh" id="SRG-LC-4JH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKl-x5-52X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <namedColor name="Tint">
+            <color red="1" green="0.3580000102519989" blue="0.14300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
